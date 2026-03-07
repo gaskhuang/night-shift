@@ -119,12 +119,12 @@ case $ROUND in
         ;;
     
     3)
-        echo "[$TIME] 📚 Round 3: PM - 知識庫整理" >> "$LOG_FILE"
+        echo "[$TIME] 🔮 Round 3: PM - 智能推薦引擎" >> "$LOG_FILE"
         echo "### 米米:" >> "$DISCUSSION"
-        echo "開始整理知識庫，更新 second_brain.md..." >> "$DISCUSSION"
-        # 統計記憶檔案
-        MEMORY_COUNT=$(find /Users/user/memory -name "*.md" | wc -l)
-        echo "[$TIME] 目前有 $MEMORY_COUNT 個記憶檔案" >> "$LOG_FILE"
+        echo "啟動智能推薦引擎，分析過去3天的數據..." >> "$DISCUSSION"
+        # 執行推薦引擎
+        /Users/user/night-shift/subagents/recommendation_engine.sh >> "$LOG_FILE" 2>&1 || true
+        echo "[$TIME] ✅ 智能推薦完成" >> "$LOG_FILE"
         ;;
     
     4)
@@ -149,9 +149,12 @@ case $ROUND in
         ;;
     
     6)
-        echo "[$TIME] 📂 Round 6: 文件整理 & SOP更新" >> "$LOG_FILE"
+        echo "[$TIME] 💡 Round 6: 解法生成器" >> "$LOG_FILE"
         echo "### 米米:" >> "$DISCUSSION"
-        echo "整理文件、更新 SOP..." >> "$DISCUSSION"
+        echo "為推薦事項生成解法..." >> "$DISCUSSION"
+        # 執行解法生成器
+        /Users/user/night-shift/subagents/solution_proposer.sh >> "$LOG_FILE" 2>&1 || true
+        echo "[$TIME] ✅ 解法生成完成" >> "$LOG_FILE"
         ;;
     
     7)

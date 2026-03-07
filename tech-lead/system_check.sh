@@ -109,7 +109,8 @@ ERROR_LOGS=(
 TOTAL_ERRORS=0
 for log in "${ERROR_LOGS[@]}"; do
     if [ -f "$log" ]; then
-        ERRORS=$(grep -c "ERROR\|error\|Error" "$log" 2>/dev/null || echo 0)
+        ERRORS=$(grep -Eic '(^|[^A-Za-z])(ERROR|Error|Exception|Traceback|failed|FATAL)([^A-Za-z]|$)' "$log" 2>/dev/null)
+        ERRORS=${ERRORS:-0}
         TOTAL_ERRORS=$((TOTAL_ERRORS + ERRORS))
     fi
 done
@@ -132,12 +133,22 @@ echo "  \"overall_status\": \"COMPLETED\""
 echo "}"
 
 # 儲存為 JSON 檔案
-cat > "$REPORT_FILE" << EOF
 {
-  "timestamp": "${DATE} ${TIME}",
-  "type": "system_check",
-  "data": $(echo "{}")
-}
-EOF
+  echo "{"
+  echo "  \"timestamp\": \"${DATE} ${TIME}\"," 
+  echo "  \"type\": \"system_check\"," 
+  echo "  \"data\": {"
+  echo "    \"disk\": {\"total\": \"$DISK_TOTAL\", \"used\": \"$DISK_USED\", \"available\": \"$DISK_AVAIL\", \"percent\": $DISK_PERCENT},"
+  if [ -n "$MEMORY_INFO" ]; then
+    echo "    \"memory\": {\"free_mb\": $FREE_MB, \"total_mb\": $TOTAL_MB},"
+  else
+    echo "    \"memory\": {\"status\": \"UNKNOWN\"},"
+  fi
+  echo "    \"cpu\": {\"load_average\": \"$LOAD_AVERAGE\"},"
+  echo "    \"services\": {\"status\": \"OK\"},"
+  echo "    \"errors\": {\"count\": $TOTAL_ERRORS}"
+  echo "  }"
+  echo "}"
+} > "$REPORT_FILE"
 
 echo "[$TIME] ✅ 系統檢查完成，報告已儲存"

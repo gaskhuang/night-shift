@@ -14,7 +14,50 @@ LOG_DIR="/Users/user/night-shift/logs"
 LOG_FILE="$LOG_DIR/night-shift-${DATE}.log"
 DISCUSSION="/Users/user/night-shift/discussion/collaboration_${DATE}.md"
 
+# GitHub 同步設定
+GITHUB_REPO_DIR="/Users/user/night-shift-repo"
+GITHUB_SYNC_ENABLED=true
+
 mkdir -p "$LOG_DIR"
+
+# ============================================
+# 🔧 GitHub 自動推送函數
+# ============================================
+push_to_github() {
+    local round_num=$1
+    local custom_msg="${2:-"Round $round_num update: $(date '+%Y-%m-%d %H:%M')"}"
+    
+    if [ "$GITHUB_SYNC_ENABLED" != "true" ]; then
+        echo "[$TIME] ℹ️ GitHub 同步已停用" >> "$LOG_FILE"
+        return 0
+    fi
+    
+    echo "[$TIME] 🚀 正在同步到 GitHub..." >> "$LOG_FILE"
+    
+    # 從原始目錄同步最新內容
+    if [ -d "$GITHUB_REPO_DIR" ]; then
+        rsync -a "/Users/user/night-shift/" "$GITHUB_REPO_DIR/" \
+            --exclude='.git' \
+            --exclude='auto_push.sh' \
+            --exclude='sync_and_push.sh' \
+            2>/dev/null || true
+        
+        cd "$GITHUB_REPO_DIR"
+        
+        # 檢查是否有變更
+        if ! git diff --quiet 2>/dev/null || ! git diff --cached --quiet 2>/dev/null || [ -n "$(git ls-files --others --exclude-standard 2>/dev/null)" ]; then
+            git add . > /dev/null 2>&1 || true
+            git commit -m "$custom_msg" > /dev/null 2>&1 || true
+            git push origin main > /dev/null 2>&1 && \
+                echo "[$TIME] ✅ 已推送到 GitHub" >> "$LOG_FILE" || \
+                echo "[$TIME] ⚠️ GitHub 推送失敗" >> "$LOG_FILE"
+        else
+            echo "[$TIME] ℹ️ 沒有新變更需要推送" >> "$LOG_FILE"
+        fi
+    else
+        echo "[$TIME] ⚠️ GitHub 倉庫目錄不存在: $GITHUB_REPO_DIR" >> "$LOG_FILE"
+    fi
+}
 
 # 決定輪次
 if [ "$1" = "auto" ]; then
@@ -140,3 +183,8 @@ esac
 
 echo "[$TIME] ✅ Round $ROUND 完成" >> "$LOG_FILE"
 echo "" >> "$DISCUSSION"
+
+# ============================================
+# 🚀 自動推送到 GitHub
+# ============================================
+push_to_github "$ROUND" "Night Shift Round $ROUND: $(date '+%Y-%m-%d %H:%M')"

@@ -1,0 +1,33 @@
+# 🌙 AI 夜班系統 - Cron 排程設定
+# 
+# 使用方式:
+# 1. 複製以下內容到 crontab: crontab -e
+# 2. 或執行: cat night-shift/cron_setup.txt | crontab -
+
+# 夜班啟動 (23:00)
+0 23 * * * /Users/user/night-shift/start_night_shift.sh >> /Users/user/night-shift/logs/cron.log 2>&1
+
+# 各輪次執行 (每小時)
+0 0 * * * /Users/user/night-shift/round_executor.sh auto >> /Users/user/night-shift/logs/cron.log 2>&1
+0 1 * * * /Users/user/night-shift/round_executor.sh auto >> /Users/user/night-shift/logs/cron.log 2>&1
+0 2 * * * /Users/user/night-shift/round_executor.sh auto >> /Users/user/night-shift/logs/cron.log 2>&1
+0 3 * * * /Users/user/night-shift/round_executor.sh auto >> /Users/user/night-shift/logs/cron.log 2>&1
+0 4 * * * /Users/user/night-shift/round_executor.sh auto >> /Users/user/night-shift/logs/cron.log 2>&1
+0 5 * * * /Users/user/night-shift/round_executor.sh auto >> /Users/user/night-shift/logs/cron.log 2>&1
+0 6 * * * /Users/user/night-shift/round_executor.sh auto >> /Users/user/night-shift/logs/cron.log 2>&1
+
+# 安全守護 (每30分鐘檢查一次)
+*/30 23,0,1,2,3,4,5,6 * * * /Users/user/night-shift/safety_guardian.sh >> /Users/user/night-shift/logs/safety-cron.log 2>&1
+
+# 清理舊日誌 (每週一次，保留30天)
+0 7 * * 1 find /Users/user/night-shift/logs -name "*.log" -mtime +30 -delete
+
+# 註釋:
+# - 23:00 Round 1: 系統檢查
+# - 00:00 Round 2: Tech Lead 巡邏
+# - 01:00 Round 3: PM 知識庫整理
+# - 02:00 Round 4: AEO/GEO 研究
+# - 03:00 Round 5: 內容生成
+# - 04:00 Round 6: 文件整理
+# - 05:00 Round 7: 提案準備
+# - 06:00 Round 8: 晨報生成

@@ -1,35 +1,17 @@
-# 🌙 夜班討論區 - 2026-03-08
+## OpenClaw Auto-Updater / 阿蓋三號
 
-> 這是 Tech Lead (J) 和 PM (米米) 的共用工作空間
+- OpenClaw 版 auto-updater 已建立完成
+- 執行腳本：`/Users/user/scripts/openclaw_auto_update.sh`
+- 排程：`/Users/user/Library/LaunchAgents/com.agaikid.openclaw-auto-update.plist`
+- 預設每天 00:00 執行
+- 回報口吻統一為阿蓋三號
+- 寫入/修改的 md 與 config 需同步 GitHub
 
-## 🚀 夜班啟動 - 01:40
+## Nano Banana 2 / 阿蓋二號 修正紀錄
 
-### J:
-夜班開始！今晚的系統狀態正常。
-讓我先抓取待辦清單和檢查日誌...
-
----
-
-
-## 01:40 - Round 1 開始
-
-### J:
-✅ 系統檢查完成
-正在抓取 Google Tasks 待辦清單...
-
-## 新增夜間任務：行銷自動化工作流（G大 指示）
-
-目標：研究並嘗試完成「一個人取代整個行銷團隊」所需的最小可行功能。
-
-方向：
-- 研究 Cody Schneider 類型工作流
-- 建立社群痛點蒐集 → 文案生成 → 圖卡生成 → Facebook 發文 → 成效回報 的可執行流程
-- 特別修復 Facebook 帶圖發文 SOP（agent-browser）
-- 若需寫程式，直接用 Claude Code 持續做，不等人工核准
-- 做錯沒關係，但中間不要中斷，要持續推進並留下紀錄
-
-夜間執行原則：
-- 可先做 MVP / 原型
-- 需要決策時先採保守可逆方案
-- 持續記錄進度與產出到報告檔
+- 已實測 Nano Banana 2 可成功生圖，輸出：`/Users/user/nano-banana2-lobster-test.png`
+- 問題不是 API Key 真缺失，而是舊 session / 舊檢查入口未讀到最新環境
+- 已補齊 key 來源：shell、skill `.env`、lobster2/3 launchd
+- 新增統一 preflight：`/Users/user/scripts/check_gemini_env.py`
+- 之後若回報「沒 key」，先跑 preflight，再決定是否真缺失；不要只靠單一 shell 誤判
 

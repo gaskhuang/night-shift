@@ -50,6 +50,11 @@ EOF
 
 echo "[$TIME] ✅ 討論區建立: $discussion_file" >> "$LOG_FILE"
 
+# 寫入目前 TASK_STATE 快照
+python3 /Users/user/night-shift/export_task_state_snapshot.py >> "$LOG_FILE" 2>&1 || true
+
+echo "[$TIME] 🧠 已寫入 TASK_STATE snapshot" >> "$LOG_FILE"
+
 # 初始化安全護欄
 touch "/tmp/night-shift-safety-lock"
 

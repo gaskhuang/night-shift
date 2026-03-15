@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-16 01:00",
+  "type": "system_check",
+  "data": {
+    "disk": {"total": "460Gi", "used": "15Gi", "available": "174Gi", "percent": 8},
+    "memory": {"free_mb": 58, "total_mb": 8652},
+    "cpu": {"load_average": "8.65"},
+    "services": {"status": "OK"},
+    "errors": {"count": 0}
+  }
+}

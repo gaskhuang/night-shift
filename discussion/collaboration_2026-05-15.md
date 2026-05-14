@@ -52,3 +52,27 @@
 ### 米米:
 開始撰寫部落格文章...
 
+## 03:26 - X / OpenCLI AEO GEO 補充研究
+
+### 米米:
+已改用 `opencli twitter search` 搜尋 X 上 AEO / GEO / AI Search SEO 討論。
+
+重點新發現：
+- HubSpot 推出 AEO Sensor，AEO/GEO 已從概念走向工具市場。
+- GEO 的重點不是 ranking，而是 citations / brand mentions。
+- AI 搜尋優化關鍵字集中在 entity authority、semantic trust、contextual relevance、citation patterns。
+- AI Search 有 first-mover dynamic：早期建立一致且權威的引用訊號，可能更難被後進品牌取代。
+- 有反向訊號：SimilarWeb 數據被引用指出 GenAI referrals 近三個月下降 15%，需驗證 AEO 實際流量 ROI。
+
+已更新：
+- `/Users/user/night-shift/research/aeo_insights.md`
+- `/Users/user/night-shift/research/geo_insights.md`
+
+
+## 04:00 - Round 6 開始
+
+### 米米:
+為推薦事項生成解法...
+### 💡 米米 (解法生成器):
+找不到推薦文件，無法生成解法
+

@@ -1,0 +1,22 @@
+0 3 * * * /Users/user/.openclaw-backup/auto-backup.sh >> /tmp/openclaw-autobackup.log 2>&1
+0 0 * * * /Users/user/update_openclaw.sh >> /Users/user/openclaw_update.log 2>&1
+0 */3 * * * /usr/bin/python3 /Users/user/scripts/email_check.py >> /Users/user/logs/email-check.log 2>&1
+
+# 🌙 AI 夜班系統 - 每天凌晨 1:00 啟動
+# 0 1 * * * /Users/user/night-shift/start_night_shift.sh >> /Users/user/night-shift/logs/cron.log 2>&1
+
+# 🔄 每週一 22:00 同步上游 repo，偵測新 use case
+0 22 * * 1 /usr/bin/python3 /Users/user/118usecase/.claude/worktrees/romantic-raman/scripts/weekly_repo_sync.py >> /tmp/weekly-repo-sync.log 2>&1
+
+# 📰 每三小時抓資訊新聞 (AI/科技/開發)
+# 來源：HackerNews / GitHub Trending / 36Kr / V2EX / ProductHunt
+# 關鍵字：AI、LLM、開發、程式、資安、科技
+0 */3 * * * /Users/user/scripts/run_tech_news.sh >> /Users/user/logs/tech_news_cron.log 2>&1
+# FB 社團監控 - 每3小時執行一次
+# 0 */3 * * * cd /Users/user/fb-groups-monitor && ./run_monitor.sh >> /Users/user/fb-groups-monitor/logs/cron.log 2>&1
+0 * * * * /usr/bin/python3 /Users/user/scripts/line_chat_scan_v2.py --force >> /Users/user/logs/line_chat_scan.log 2>&1
+0 * * * * /Users/user/scripts/line_summary.sh >> /tmp/line-cron.log 2>&1
+
+# 🍎 Apple 整修品 Mac 每日監控 - 每小時 爬取整修品並寄送 email
+7 * * * * /Users/user/scripts/apple_refurb_daily.sh >> /Users/user/logs/apple_refurb.log 2>&1
+0 3 * * * cd /Users/user && /Users/user/bin/qmd update >> /tmp/qmd_update.log 2>&1 && /Users/user/bin/qmd embed >> /tmp/qmd_embed.log 2>&1

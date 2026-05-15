@@ -140,3 +140,28 @@ AEO (Answer Engine Optimization) 是針對 AI 搜尋引擎（如 ChatGPT、Perpl
 - [ ] 做一頁品牌 entity profile：公司名稱、服務、客戶案例、地區、代表人物、聯絡方式、差異化。
 - [ ] 在網站加入 FAQ Schema、Organization Schema、Service Schema、LocalBusiness Schema。
 - [ ] 每週用 OpenCLI / X 搜尋 AEO/GEO 新工具與案例，累積成銷售簡報素材。
+
+---
+
+## 📅 2026-05-16 更新
+
+### 🔥 AEO 最新趨勢
+
+
+
+### 🤖 AI 搜尋優化
+
+
+
+### 📊 結構化數據
+
+
+
+### 💡 行動建議
+
+- [ ] 檢視網站 FAQ Schema 標記
+- [ ] 優化 Featured Snippet 內容
+- [ ] 測試 AI 搜尋引擎抓取結果
+
+*研究時間: 02:00*
+

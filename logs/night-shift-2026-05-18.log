@@ -173,3 +173,6 @@ json.decoder.JSONDecodeError: Expecting ',' delimiter: line 30 column 1 (char 71
 [23:06] ✅ 系統檢查完成，報告已儲存
 [23:06] ✅ Round 1 完成
 [23:06] 🚀 正在同步到 GitHub...
+[23:06] ✅ 已推送到 GitHub
+[23:06] ✅ 首輪完成，後續輪次由 cron 接手
+========================================

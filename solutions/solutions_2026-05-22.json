@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-22",
+  "generated_at": "04:00",
+  "total_solutions": 3,
+  "solutions": [
+    {
+      "recommendation_id": "rec_2026-05-22_0",
+      "recommendation_title": "發現潛在新機會或想法",
+      "solution_title": "建立機會評估框架與快速驗證流程",
+      "solution_details": "1. 評估可行性與ROI
+2. 設計最小驗證實驗
+3. 設定決策時間點
+4. 準備資源規劃",
+      "estimated_time": "2-3 天",
+      "auto_apply": "no",
+      "priority": "low"
+    },
+    {
+      "recommendation_id": "rec_2026-05-22_1",
+      "recommendation_title": "記憶檔案累積: 284 個，建議整理",
+      "solution_title": "執行預防性維護與知識整理",
+      "solution_details": "1. 歸檔舊記憶檔案
+2. 建立索引與標籤
+3. 清理臨時文件
+4. 優化資料結構",
+      "estimated_time": "半天",
+      "auto_apply": "yes",
+      "priority": "low"
+    },
+    {
+      "recommendation_id": "rec_2026-05-22_2",
+      "recommendation_title": "發現學習或研究需求",
+      "solution_title": "建立學習計畫與資源清單",
+      "solution_details": "1. 整理學習主題清單
+2. 收集相關資源
+3. 設定學習時間塊
+4. 建立筆記模板",
+      "estimated_time": "持續",
+      "auto_apply": "partial",
+      "priority": "low"
+    }
+  ]
+}

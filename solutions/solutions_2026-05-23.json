@@ -1,0 +1,43 @@
+{
+  "date": "2026-05-23",
+  "generated_at": "04:00",
+  "total_solutions": 3,
+  "solutions": [
+    {
+      "recommendation_id": "rec_2026-05-23_0",
+      "recommendation_title": "檢測到阻塞中的任務或專案",
+      "solution_title": "進行專案阻塞點分析與資源調度",
+      "solution_details": "1. 識別阻塞原因
+2. 評估外部資源需求
+3. 設定檢查點與里程碑
+4. 準備升級方案",
+      "estimated_time": "1 天",
+      "auto_apply": "no",
+      "priority": "medium"
+    },
+    {
+      "recommendation_id": "rec_2026-05-23_1",
+      "recommendation_title": "記憶檔案累積: 283 個，建議整理",
+      "solution_title": "執行預防性維護與知識整理",
+      "solution_details": "1. 歸檔舊記憶檔案
+2. 建立索引與標籤
+3. 清理臨時文件
+4. 優化資料結構",
+      "estimated_time": "半天",
+      "auto_apply": "yes",
+      "priority": "low"
+    },
+    {
+      "recommendation_id": "rec_2026-05-23_2",
+      "recommendation_title": "發現學習或研究需求",
+      "solution_title": "建立學習計畫與資源清單",
+      "solution_details": "1. 整理學習主題清單
+2. 收集相關資源
+3. 設定學習時間塊
+4. 建立筆記模板",
+      "estimated_time": "持續",
+      "auto_apply": "partial",
+      "priority": "low"
+    }
+  ]
+}

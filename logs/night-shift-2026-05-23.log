@@ -75,3 +75,39 @@
 [05:00] 📋 Round 7: 提案準備 & 晨報草稿
 [05:00] ✅ Round 7 完成
 [05:00] 🚀 正在同步到 GitHub...
+[05:00] ✅ 已推送到 GitHub
+
+========================================
+🌙 Round 8 - 06:00
+========================================
+[06:00] 🌅 Round 8: 最終檢查 & 晨報生成
+[06:00] 🌅 開始生成晨報 v2.5...
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 298, in load
+    return loads(fp.read(),
+        cls=cls, object_hook=object_hook,
+        parse_float=parse_float, parse_int=parse_int,
+        parse_constant=parse_constant, object_pairs_hook=object_pairs_hook, **kw)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.4_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 40 column 1 (char 972)
+讀取解法檔案時發生錯誤: Invalid control character at: line 10 column 40 (char 273)
+/Users/user/night-shift/generate_morning_report.sh: line 258: [: 0
+0: integer expression expected
+/Users/user/night-shift/generate_morning_report.sh: line 248: [: 0
+0: integer expression expected
+[06:00] ✅ 晨報已生成: /Users/user/night-shift/reports/morning-report-2026-05-23.md
+[06:00] 📄 報告位置: night-shift/reports/morning-report-2026-05-23.md
+[06:00] 🔮 包含 3 個智能推薦
+[06:00] 💡 包含 3 個解法
+[06:00] ⏰ 08:30 將生成今日行動推薦
+[06:00] ✅ Round 8 完成
+[06:00] 🚀 正在同步到 GitHub...

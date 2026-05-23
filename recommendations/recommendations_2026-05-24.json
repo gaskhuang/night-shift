@@ -5,6 +5,7 @@
   "recommendations": [
     {
       "id": "rec_2026-05-24_0",
+      "solution": "進行專案阻塞點分析與資源調度",
       "title": "檢測到阻塞中的任務或專案",
       "priority": "medium",
       "category": "project",
@@ -14,6 +15,7 @@
     },
     {
       "id": "rec_2026-05-24_1",
+      "solution": "執行預防性維護與知識整理",
       "title": "記憶檔案累積: 284 個，建議整理",
       "priority": "low",
       "category": "maintenance",

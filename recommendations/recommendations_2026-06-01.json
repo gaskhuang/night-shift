@@ -1,0 +1,50 @@
+{
+  "date": "2026-06-01",
+  "generated_at": "01:00",
+  "total_recommendations": 4,
+  "recommendations": [
+    {
+      "id": "rec_2026-06-01_0",
+      "title": "檢測到阻塞中的任務或專案",
+      "priority": "medium",
+      "category": "project",
+      "context": "有任務處於等待/阻塞狀態，建議評估是否需要外部協助或調整方向",
+      "status": "pending",
+      "solution": null
+    },
+    {
+      "id": "rec_2026-06-01_1",
+      "title": "記憶檔案累積: 305 個，建議整理",
+      "priority": "low",
+      "category": "maintenance",
+      "context": "記憶檔案數量較多，建議進行歸檔或建立索引",
+      "status": "pending",
+      "solution": null
+    },
+    {
+      "id": "rec_2026-06-01_2",
+      "title": "檢測到未回答的問題需要決策",
+      "priority": "medium",
+      "category": "decision",
+      "context": "記錄中有待決策的問題，建議排時間思考或討論",
+      "status": "pending",
+      "solution": null
+    },
+    {
+      "id": "rec_2026-06-01_3",
+      "title": "發現學習或研究需求",
+      "priority": "low",
+      "category": "learning",
+      "context": "有需要學習的新技術或研究主題，可安排在低峰時段進行",
+      "status": "pending",
+      "solution": null
+    }
+  ],
+  "data_sources": {
+    "memory_files_analyzed": 2,
+    "todo_items_found": 0
+0,
+    "error_logs_found": 1,
+    "recent_files": 15
+  }
+}

@@ -5,6 +5,7 @@
   "recommendations": [
     {
       "id": "rec_2026-06-09_0",
+      "solution": "執行預防性維護與知識整理",
       "title": "記憶檔案累積: 321 個，建議整理",
       "priority": "low",
       "category": "maintenance",
@@ -14,6 +15,7 @@
     },
     {
       "id": "rec_2026-06-09_1",
+      "solution": "整理決策清單與背景資料準備",
       "title": "檢測到未回答的問題需要決策",
       "priority": "medium",
       "category": "decision",
@@ -23,6 +25,7 @@
     },
     {
       "id": "rec_2026-06-09_2",
+      "solution": "建立學習計畫與資源清單",
       "title": "發現學習或研究需求",
       "priority": "low",
       "category": "learning",

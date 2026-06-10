@@ -1,0 +1,24 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "01:00",
+  "total_recommendations": 1,
+  "recommendations": [
+    {
+      "id": "rec_2026-06-11_0",
+      "title": "記憶檔案累積: 322 個，建議整理",
+      "priority": "low",
+      "category": "maintenance",
+      "context": "記憶檔案數量較多，建議進行歸檔或建立索引",
+      "status": "pending",
+      "solution": null
+    }
+  ],
+  "data_sources": {
+    "memory_files_analyzed": 0
+0,
+    "todo_items_found": 0
+0,
+    "error_logs_found": 1,
+    "recent_files": 15
+  }
+}

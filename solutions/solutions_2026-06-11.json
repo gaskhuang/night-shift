@@ -1,0 +1,19 @@
+{
+  "date": "2026-06-11",
+  "generated_at": "04:00",
+  "total_solutions": 1,
+  "solutions": [
+    {
+      "recommendation_id": "rec_2026-06-11_0",
+      "recommendation_title": "記憶檔案累積: 322 個，建議整理",
+      "solution_title": "執行預防性維護與知識整理",
+      "solution_details": "1. 歸檔舊記憶檔案
+2. 建立索引與標籤
+3. 清理臨時文件
+4. 優化資料結構",
+      "estimated_time": "半天",
+      "auto_apply": "yes",
+      "priority": "low"
+    }
+  ]
+}

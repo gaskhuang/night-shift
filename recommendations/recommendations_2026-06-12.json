@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-12",
+  "generated_at": "01:00",
+  "total_recommendations": 2,
+  "recommendations": [
+    {
+      "id": "rec_2026-06-12_0",
+      "title": "記憶檔案累積: 323 個，建議整理",
+      "priority": "low",
+      "category": "maintenance",
+      "context": "記憶檔案數量較多，建議進行歸檔或建立索引",
+      "status": "pending",
+      "solution": null
+    },
+    {
+      "id": "rec_2026-06-12_1",
+      "title": "發現學習或研究需求",
+      "priority": "low",
+      "category": "learning",
+      "context": "有需要學習的新技術或研究主題，可安排在低峰時段進行",
+      "status": "pending",
+      "solution": null
+    }
+  ],
+  "data_sources": {
+    "memory_files_analyzed": 1,
+    "todo_items_found": 0
+0,
+    "error_logs_found": 1,
+    "recent_files": 15
+  }
+}

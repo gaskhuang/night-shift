@@ -1,0 +1,50 @@
+{
+  "date": "2026-06-15",
+  "generated_at": "01:00",
+  "total_recommendations": 4,
+  "recommendations": [
+    {
+      "id": "rec_2026-06-15_0",
+      "title": "發現潛在新機會或想法",
+      "priority": "low",
+      "category": "opportunity",
+      "context": "記錄中有新的想法或機會，建議進一步評估可行性",
+      "status": "pending",
+      "solution": null
+    },
+    {
+      "id": "rec_2026-06-15_1",
+      "title": "記憶檔案累積: 328 個，建議整理",
+      "priority": "low",
+      "category": "maintenance",
+      "context": "記憶檔案數量較多，建議進行歸檔或建立索引",
+      "status": "pending",
+      "solution": null
+    },
+    {
+      "id": "rec_2026-06-15_2",
+      "title": "檢測到未回答的問題需要決策",
+      "priority": "medium",
+      "category": "decision",
+      "context": "記錄中有待決策的問題，建議排時間思考或討論",
+      "status": "pending",
+      "solution": null
+    },
+    {
+      "id": "rec_2026-06-15_3",
+      "title": "發現學習或研究需求",
+      "priority": "low",
+      "category": "learning",
+      "context": "有需要學習的新技術或研究主題，可安排在低峰時段進行",
+      "status": "pending",
+      "solution": null
+    }
+  ],
+  "data_sources": {
+    "memory_files_analyzed": 2,
+    "todo_items_found": 0
+0,
+    "error_logs_found": 1,
+    "recent_files": 15
+  }
+}

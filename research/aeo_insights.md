@@ -965,3 +965,28 @@ AEO (Answer Engine Optimization) 是針對 AI 搜尋引擎（如 ChatGPT、Perpl
 
 *研究時間: 02:00*
 
+
+---
+
+## 📅 2026-06-18 更新
+
+### 🔥 AEO 最新趨勢
+
+
+
+### 🤖 AI 搜尋優化
+
+
+
+### 📊 結構化數據
+
+
+
+### 💡 行動建議
+
+- [ ] 檢視網站 FAQ Schema 標記
+- [ ] 優化 Featured Snippet 內容
+- [ ] 測試 AI 搜尋引擎抓取結果
+
+*研究時間: 02:00*
+

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-07-22 23:12",
+  "type": "system_check",
+  "data": {
+    "disk": {"total": "460Gi", "used": "11Gi", "available": "42Gi", "percent": 22},
+    "memory": {"free_mb": 308, "total_mb": 14413},
+    "cpu": {"load_average": "4.69"},
+    "services": {"status": "OK"},
+    "errors": {"count": 1}
+  }
+}
